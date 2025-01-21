@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 
 [project]
-name = "ncoda_util"
+name = "ncoda_proc"
 authors = [
 	{ "name" = "Galina Chirokova", "email" = "galina.chirokova@colostate.edu" },
 	{ "name" = "Robert DeMaria", "email" = "robert.demaria@colostate.edu" },
@@ -26,4 +26,4 @@ Repository = "https://github.com/galina-cira/tc_ncoda_python.git"
 # Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
-version = { attr = "ncoda_util.__version__" }
+version = { attr = "ncoda_proc.__version__" }
