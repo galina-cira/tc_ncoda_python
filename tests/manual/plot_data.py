@@ -5,7 +5,7 @@ import cartopy.feature as cfeature
 import matplotlib.pyplot as plt
 from mpl_toolkits import axes_grid1
 
-from ncoda_util import reader
+from ncoda_proc import reader
 
 TEMPERATURE_FILE = pathlib.Path(
     "tests/manual/in_data/example/seatmp_pre_000000_005000_1o2161x1051_2023090700_00000000_analfld"

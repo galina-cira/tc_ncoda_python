@@ -10,7 +10,7 @@ DATA_FILE_SIZE = M * N * L * 4  # Data(3D) record length in bytes
 COORD_FILE_SIZE = M * N * 4  # Coordinate(2D) record length in bytes
 
 MISSING = -999.0
-MISSING_ATOL = 1e-6
+MISSING_THRESHOLD = -900
 
 IN_DTYPE = ">f4"
 
@@ -30,7 +30,7 @@ def read_data(filename: pathlib.Path) -> np.ndarray:
 
 
 def _convert_missing_to_nan(data: np.ndarray) -> None:
-    data[np.isclose(data, MISSING, atol=MISSING_ATOL)] = np.nan
+    data[data < MISSING_THRESHOLD] = np.nan
 
 
 def read_coord(filename: pathlib.Path) -> np.ndarray:
