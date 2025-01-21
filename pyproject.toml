@@ -4,25 +4,26 @@ build-backend = "setuptools.build_meta"
 
 
 [project]
-name = "ncoda_utils"
-authors = [{"name" = "Galina Chirokova", "email" = "galina.chirokova@colostate.edu"}, 
-	{"name" = "Robert DeMaria", "email" = "robert.demaria@colostate.edu"}
+name = "ncoda_util"
+authors = [
+	{ "name" = "Galina Chirokova", "email" = "galina.chirokova@colostate.edu" },
+	{ "name" = "Robert DeMaria", "email" = "robert.demaria@colostate.edu" },
 ]
 description = "Utilities for working with NCODA data."
-readme = {file = "README.md", content-type = "text/markdown"}
-requires-python = ">=3.11"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.10"
 dynamic = ["version"]
-license = {file = "LICENSE.txt"}
+license = { file = "LICENSE.txt" }
 dependencies = ["numpy"]
 
 [project.optional-dependencies]
 test = ["cartopy"]
 
 [project.urls]
-Homepage = "https://github.com/galina-cira/ncoda_reader"
+Homepage = "https://github.com/galina-cira/tc_ncoda_python"
 # Documentation = "https://readthedocs.org"
-Repository = "https://github.com/galina-cira/ncoda_reader.git"
+Repository = "https://github.com/galina-cira/tc_ncoda_python.git"
 # Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
-version = {attr = "ncoa_utils.__version__"}
+version = { attr = "ncoda_util.__version__" }
